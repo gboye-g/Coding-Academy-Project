@@ -1,0 +1,262 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;1,100;1,300&family=Work+Sans:ital,wght@0,100;0,200;0,300;1,100;1,200;1,300&display=swap');
+
+
+:root{
+    --pri-color: #faa819;
+}
+*{
+ font-family: 'Roboto', sans-serif;
+ font-family: 'Work Sans', sans-serif;
+}
+body{
+    margin: 0;
+}
+a{
+    text-decoration: none;
+}
+
+/* Nav-bar and  logo styling starts */
+.logo > div{
+    font-family: 'josefin Sans', sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--pri-color);
+}
+.logo:hover{
+    transform: scale(1.02,1.04);
+    transition: .2s;
+    color: #faa004;
+}
+
+nav{
+    padding: 20px 0;
+    background-color: #000;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+ .nav-item-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width:90%;
+    margin: auto;
+}
+.nav-item-wrapper ul{
+    margin: 0;
+}
+nav ul li{
+list-style-type: none;
+display: inline-block;
+padding-left: 50px;
+}
+nav ul li a{
+color: var(--pri-color);
+font-weight: bold;
+text-transform: capitalize;
+}
+nav ul li a:hover{
+color: white;
+transition: .2s;
+} 
+/* Nav-bar and logo styling ends */
+
+.form-section{
+    width: 100%;
+    height: 100vh;
+    background-color: var(--pri-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#signupCus, #signupHost {
+    width: 500px;
+}
+
+.form-wrapper{
+    margin-top: 90px;
+    width: 360px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+.form-header{
+    text-align: center;
+    font-weight: 600;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+.form-header2{
+        text-align: center;
+        font-weight: 600;
+        font-size: 18px;
+        margin-bottom: 20px;
+}
+
+.user-button {
+    width: 220px;
+    margin: 10px auto;
+    position: relative;
+    box-shadow: 0 0 1px 1px var(--pri-color);
+    border-radius: 30px;
+}
+#toggle {
+    position: absolute;
+    width: 110px;
+    height: 100%;
+    background: linear-gradient(to right, #fbd79a,#faa819);
+    border-radius: 30px;
+    transition: .4s;
+}
+#toggle.active{
+left: 110px;
+}
+.toggle-btn {
+    padding: 10px 30px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: none;
+    z-index: 1000;
+    position: relative;
+}
+
+
+
+/*Just for Signup */
+.split{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+/* Ending of just for Signup */
+
+.input-wrapper{
+    position: relative;
+    height: 50px;
+    margin-top: 10px;
+}
+#signup .input-wrapper input{
+    width: 90%;
+}
+.input-wrapper input{
+    width: 100%;
+    height: 100%;
+    border: none;
+    padding: 0 35px;
+    outline: none;    
+    box-sizing: border-box;
+    font-size: 16px;
+    font-weight: 600;
+    border-bottom: 2px solid #ccc;
+    border-top: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+.input-wrapper i{
+    position: absolute;
+    color: #999;
+    font-size: 23px;
+    padding-left: 5px;
+    top: 23%;
+    transition: all 0.3s ease;
+}
+.input-wrapper input:is(:focus, :valid) {
+    border-bottom-color: var(--pri-color); 
+}
+.input-wrapper input:is(:focus, :valid) ~ i{
+    color: black; 
+}
+.input-wrapper i.icon{
+    left: 0;
+}
+.input-wrapper i.showHidePw{
+    right: 0;
+    cursor: pointer;
+    padding: 10px;
+    top: 2%;
+}
+
+.checkbox-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+.checkbox-alignment{
+    display: flex;
+    align-items: center;
+}
+.checkbox-alignment input{
+    margin: 0 8px -2px 4px;
+    accent-color: var(--pri-color);
+}
+.form-wrapper .text{
+    font-size: 14px;
+    font-weight: 1000;
+}
+.form-wrapper a.text{
+    color: var(--pri-color);
+    font-weight: 1000;
+}
+.form-wrapper a.text:hover{
+    transform: scale(1.02,1.04);
+}
+
+.btn-wrapper{
+    text-align: center;
+    margin-top: 25px;
+}
+.btn-wrapper button{
+    background-color: var(--pri-color);
+    border-radius: 6px;
+    border: none;
+    width: 100%;
+    height: 45px;
+    padding: 5px 30px;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.btn-wrapper button:hover{
+    transform: scale(1.02,1.04);
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    visibility: hidden;
+}
+/* The above removes the default type=date icon */
+
+.login-signup span{
+    margin-right: 5px;
+}
+.login-signup{
+    display: flex;
+    margin-top: 15px;
+}
+
+/* Form validation script (START) */
+.input-error {
+    display: none;
+}
+.active {
+    position: relative;
+    z-index: 3;
+    color: red;
+}
+/* For form validation script (END) */
+
+@media screen and (max-width: 300px ) {
+    .form-wrapper{
+        width: 100%;
+    }
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DeePee Login</title>
+    <link rel="shortcut icon " href="/Landing Page/Images/Logo picture.jpg">
+
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <link rel = "stylesheet" type="text/css" href="Style.css">
+
+</head>
+<body>
+
+    <nav>
+        <div class="nav-item-wrapper">
+            
+                <a href="../Landing Page/Landing.html" class="logo">
+                    <div>DeePee</div>
+                </a>
+            
+            <ul>
+                <li><a href="../Landing Page/Landing.html">Home</a></li>
+                <li><a href="../Landing Page/Landing.html#about">About</a></li>
+                <li><a href="../Landing Page/Landing.html#social">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="form-section">
+         <form name="forms" class="form-wrapper" id="login">
+            
+            <div class="form-header">Welcome!</div>
+            <div class="form-header2">What would you like to do today?</div>
+            
+            <div class="user-button">
+                <div id="toggle"></div>
+                <button type="button" class="toggle-btn">Customer</button>
+                <button type="button" class="toggle-btn">Host</button>
+            </div>
+
+            <div class="input-wrapper"> 
+                <input type="email" name="email" id="email" placeholder="Enter your email" required>
+                <i class="uil uil-envelope-alt icon left-icon"></i>
+                <div class="input-error" id="errorMessage">Invalid Email !</div>
+            </div>
+            <div class="input-wrapper">
+                <input name="password" type="password" class="password" placeholder="Enter your password" required>
+                <i class="uil uil-padlock icon"></i>
+                <i class="uil uil-eye-slash showHidePw"></i>
+            </div>
+
+            <div class="checkbox-wrapper">
+                <div class="checkbox-alignment">
+                    <input type="checkbox" id="logCheck">
+                    <label for="logCheck" class="text">Remember me</label>
+                </div>
+                <a href="#" class="text" >Forgot password?</a>
+            </div>
+
+            <div class="login btn-wrapper"> 
+                <button type="submit">Login</button>
+            </div>
+
+            <div class="login-signup">
+                <span class="text">Not a user yet?</span>
+                <a href="./SignupCus.html" class="text Signup-link" >Signup as a customer</a>
+                <a href="./SignupHost.html" class="text Signup-link">Signup as a host</a>
+            </div>
+
+         </form>
+    </div>
+
+    <script src="Login.js"></script>
+
+</body>
+</html>

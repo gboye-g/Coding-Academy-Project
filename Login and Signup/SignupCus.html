@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DeePee Customer Signup</title>
+    <link rel="shortcut icon " href="/Landing Page/Images/Logo picture.jpg">
+
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <link rel = "stylesheet" type="text/css" href="Style.css">
+</head>
+
+<body>
+
+    <nav>
+        <div class="nav-item-wrapper">
+
+            <a href="../Landing Page/Landing.html" class="logo">
+                <div>DeePee</div>
+            </a>
+
+            <ul>
+                <li><a href="../Landing Page/Landing.html">Home</a></li>
+                <li><a href="../Landing Page/Landing.html#about">About</a></li>
+                <li><a href="../Landing Page/Landing.html#social">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="form-section">
+        <form name="forms" class="form-wrapper" id="signupCus">
+
+            <div class="form-header">We can't wait to have you onboard!</div>
+
+            <div class="split">
+                <div class="input-wrapper"> 
+                    <input type="text" id="fname" placeholder="First name" required>
+                    <i class="uil uil-user icon"></i>
+                </div>
+                <div class="input-wrapper"> 
+                    <input type="text" id="lname" placeholder="Last name" required>
+                    <i class="uil uil-user icon"></i>
+                </div>
+            </div>   
+
+            <div class="split">
+                <div class="input-wrapper"> 
+                    <input type="email" name="email" id="email" placeholder="Email" required>
+                    <i class="uil uil-envelope-alt icon"></i>
+                    <div class="input-error" id="errorMessage">Invalid Email !</div>
+                </div>
+                <div class="input-wrapper"> 
+                    <input type="tel" id="phone" placeholder="Phone number" minlength=11 maxlength="11" required>
+                    <i class="uil uil-phone icon"></i>
+                </div>
+            </div>
+
+            <div class="split">
+                <div class="input-wrapper"> 
+                    <input onfocus="(this.type='date')" id="dob" placeholder="Date of birth" required>
+                    <i class="uil uil-calender icon"></i> 
+
+                </div>
+                <div class="input-wrapper"> 
+                    <input type="text" class="isw" id="ISWid" placeholder="ISW id" required>
+                    <i class="uil uil-user isw icon"></i>
+                </div>
+            </div>
+            
+            <div class="split">
+                <div class="input-wrapper">
+                    <input type="password" class="password" id="password" placeholder="Password" required>
+                    <i class="uil uil-padlock icon"></i>
+                </div>
+                <div class="input-wrapper">
+                    <input type="password" class="password" id="confirmPassword" placeholder="Confirm password" required>
+                    <i class="uil uil-padlock icon"></i>
+                    <i class="uil uil-eye-slash showHidePw"></i>
+                </div>
+            </div>
+
+            <div class="signup btn-wrapper"> 
+                <button type="submit">Signup</button>
+            </div>
+
+             <div class="login-signup">
+                <span class="text">Have an account already?</span>
+                <a href="./Login.html" class="text login-link">Login now</a>
+             </div>
+
+        </form>
+    </div>
+
+    <script src="SignupCus.js"></script>
+
+</body>
+</html>

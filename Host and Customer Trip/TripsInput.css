@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;1,100;1,300&family=Work+Sans:ital,wght@0,100;0,200;0,300;1,100;1,200;1,300&display=swap');
+
+
+:root {
+    --pri-color: #faa819;
+}
+
+* {
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Work Sans', sans-serif;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--pri-color);
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Nav-bar and  logo styling starts */
+
+.logo>div {
+    font-family: 'josefin Sans', sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--pri-color);
+}
+.logo:hover {
+    transform: scale(1.02, 1.04);
+    transition: .2s;
+    color: #faa004;
+}
+
+nav {
+    padding: 20px 0;
+    background-color: #000;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.nav-item-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+}
+.nav-item-wrapper ul {
+    margin: 0;
+}
+nav ul li {
+    list-style-type: none;
+    display: inline-block;
+    padding-left: 50px;
+}
+nav ul li a {
+    color: var(--pri-color);
+    font-weight: bold;
+    text-transform: capitalize;
+}
+nav ul li a:hover {
+    color: white;
+    transition: .2s;
+}
+/* Nav-bar and logo styling ends */
+
+
+.main-container p{
+    font-size: 50px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.wrappers{
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    flex-direction: column;
+} 
+
+.form-control #left{
+    margin-right: 100px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.form-control #right{
+    margin-left: 100px;
+}
+.form-control #center{
+    margin-left: 90px;
+    margin-right: 90px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+.form-control input, select {
+    border: 3px solid black;
+    text-align: center;
+    font-size: 18px;
+    width: 300px;
+    padding: 15px 10px;
+    border-radius: 30px;
+    outline: none;
+}
+.form-control input:is(:focus) {
+    border-color: var(--pri-color);
+    font-weight: 900; 
+}
+.form-control select:is(:focus) {
+    border-color: var(--pri-color);
+    font-weight: 900; 
+}
+
+select{
+    -webkit-appearance: none;
+}
+
+.submit-btn {
+    margin-top: 50px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: 0;
+    color: white;
+    font-size: 25px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    cursor: pointer;
+    background: black;
+    transition: all 0.3s ease;
+}
+.submit-btn:hover{
+    transform: scale(1.02,1.04);
+}
+/* is it possible to inherit styling from another css style and prioritize the first one */
+
+/* @media screen and (max-width: 300px) {
+    .form-wrapper {
+        width: 100%;
+    }
+} */

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DeePee Upload A Trip</title>
+    <link rel="shortcut icon " href="/Landing Page/Images/Logo picture.jpg">
+
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <link rel="stylesheet" type="text/css" href="TripsInput.css">
+</head>
+
+<body>
+
+    <nav>
+        <div class="nav-item-wrapper">
+
+            <a href="../Landing Page/Landing.html" class="logo">
+                <div>DeePee</div>
+            </a>
+
+            <ul>
+                <li><a href="../Landing Page/Landing.html">Home</a></li>
+                <li><a href="../Landing Page/Landing.html#about">About</a></li>
+                <li><a href="../Landing Page/Landing.html#social">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="main-container">
+        
+        <p>Kindly enter your trip details</p>
+
+        <form class="wrappers">
+            <div class="form-control time">
+                <input type="datetime-local" placeholder="Departure time" required>
+            </div>
+
+            <div class="wrapper-input form-control">
+                <select id="left" required>
+                    <option value="" disabled selected hidden>Source location</option>
+                    <option value="1">Aguda/Surulere</option>
+                    <option value="2">Igando/Ikotun</option>
+                    <option value="3">Ketu</option>
+                    <option value="4">Ogba/Berger</option>
+                    <option value="5">Iyana-Ipaja/Ikeja</option>
+                    <option value="6">Festac</option>
+                    <option value="7">Gbagada</option>
+                    <option value="8">Yaba</option>
+                    <option value="9">Sangotedo</option>
+                    <option value="10">Addo Road</option>
+                    <option value="11">Abule-Egba</option>
+                </select>
+                <select id="right" required>
+                    <option value="" disabled selected hidden>Destination location</option>
+                    <option value="1">Aguda/Surulere</option>
+                    <option value="2">Igando/Ikotun</option>
+                    <option value="3">Ketu</option>
+                    <option value="4">Ogba/Berger</option>
+                    <option value="5">Iyana-Ipaja/Ikeja</option>
+                    <option value="6">Festac</option>
+                    <option value="7">Gbagada</option>
+                    <option value="8">Yaba</option>
+                    <option value="9">Sangotedo</option>
+                    <option value="10">Addo Road</option>
+                    <option value="11">Abule-Egba</option>
+                </select>
+            </div>
+
+            <div class="form-control seats">
+                <select required>
+                    <option value="" disabled selected hidden>No of available seats</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                </select>
+            </div>
+
+            <button type="submit" class="submit-btn">Upload</button>
+            
+        </form>
+
+    </div>
+
+</body>
+</head>
