@@ -12,6 +12,7 @@
 body{
     margin: 0;
 }
+
 a{
     text-decoration: none;
 }
@@ -36,9 +37,6 @@ nav{
     position: fixed;
     width: 100%;
     z-index: 100;
-    top: 0;
-    left: 0;
-    right: 0;
 }
  .nav-item-wrapper{
     display: flex;

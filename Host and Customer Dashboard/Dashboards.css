@@ -11,15 +11,11 @@
 
 body {
     margin: 0;
-    background-color: var(--pri-color);
+    /* background-color: var(--pri-color); */
 }
 
-nav {
-    padding: 25px 0;
-    background-color: #000;
-    position: fixed;
-    width: 100%;
-    z-index: 100;
+a {
+    text-decoration: none;
 }
 
 .container {
@@ -27,66 +23,50 @@ nav {
     margin: auto;
 }
 
+/* Nav-bar and  logo styling starts */
+.logo>div {
+    font-family: 'josefin Sans', sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--pri-color);
+}
+.logo:hover {
+    transform: scale(1.02, 1.04);
+    transition: .2s;
+    color: #faa004;
+}
+
+nav {
+    padding: 20px 0;
+    background-color: #000;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    /* top: 0;
+    left: 0;
+    right: 0; */
+}
 .nav-item-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-
-.logo {
-    font-size: 40px;
-    letter-spacing: 1px;
-    color: var(--pri-color);
+.nav-item-wrapper ul {
+    margin: 0;
 }
-logo:hover {
-    transform: scale(1.02, 1.04);
-    transition: .2s;
-    color: var(--pri-color);
-}
-
-.side-of-nav li {
+nav ul li {
+    list-style-type: none;
     display: inline-block;
+    padding-left: 50px;
 }
-.side-of-nav a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.1rem;
-    font-weight: bold;
-    margin: 0 25px;
-}
-.side-of-nav a:hover {
+nav ul li a {
     color: var(--pri-color);
+    font-weight: bold;
+    text-transform: capitalize;
+}
+nav ul li a:hover {
+    color: white;
     transition: .2s;
 }
-
-.right {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.user-dropdown {
-    cursor: pointer;
-}
-.dropdown {
-    display: none;
-    background: #000;
-    width: 120px;
-    position: absolute;
-    z-index: 10;
-    right: -200px;
-    padding: 5px 0;
-    border-radius: 10px;
-}
-.dropdown ul {
-    display: flex;
-    flex-direction: column;
-}
-.dropdown ul li {
-    padding: 8px 10px;
-}
-.dropdown.active {
-    display: block;
-    right: 10px;
-    text-align: center;
- }
+/* Nav-bar and logo styling ends */
