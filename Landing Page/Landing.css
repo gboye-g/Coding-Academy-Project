@@ -42,10 +42,10 @@ nav {
     letter-spacing: 1px;
     color: var(--pri-color);
 }
-logo:hover {
+.logo:hover {
     transform: scale(1.02, 1.04);
     transition: .2s;
-    color: var(--pri-color);
+    color: #faa004;
 }
 
 .side-of-nav li {
@@ -53,7 +53,6 @@ logo:hover {
 }
 .side-of-nav a {
     color: white;
-    text-decoration: none;
     font-size: 1.1rem;
     font-weight: bold;
     margin: 0 25px;
@@ -128,7 +127,7 @@ logo:hover {
 /* About section starts*/
 .about {
     width: 100%;
-    padding: 20px 0px;
+    padding: 60px 0px 20px 0px;
     background-color: white;
 }
 .about-text-sqr {
@@ -144,29 +143,31 @@ logo:hover {
     color: black;
     font-size: 36px;
     text-transform: capitalize;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     text-align: center;
 }
 .about-text-sqr h5 {
     color: black;
     letter-spacing: 1px;
-    font-size: 20px;
+    font-size: 18px;
     opacity: 0.8;
     margin-bottom: 10px;
     text-transform: capitalize;
+    text-align: center;
 }
 .about-text-sqr p {
     color: black;
     letter-spacing: 1px;
     line-height: 28px;
-    font-size: 18px;
+    font-size: 16px;
     opacity: 0.8;
     margin-bottom: 30px;
     text-align: justify;
 }
 .about-text-sqr i{
     color: var(--pri-color);
-    font-size: 60px;
+    text-align: center;
+    font-size: 40px;
     width: 100%;
     padding-bottom: 20px;
 }

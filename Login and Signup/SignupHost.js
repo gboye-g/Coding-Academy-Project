@@ -1,10 +1,18 @@
-// Form email validation starts
+$(document).ready(function () {
+  
+// Form validation starts
 let errorMessage = document.getElementById("errorMessage");
 
 let fname = document.getElementById("fname");
 let lname = document.getElementById("lname");
 let email = document.getElementById("email");
 let phone = document.getElementById("phone");
+let dob = document.getElementById("dob");
+let iswId = document.getElementById("iswId");
+let password = document.getElementById("password");
+let confirmPassword = document.getElementById("confirmPassword");
+let licenseNo = document.getElementById("licenseNo");
+let plateNo = document.getElementById("plateNo");
 
 let name_pattern = /^[A-Za-z-]+$/;
 let email_pattern = /^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/;
@@ -54,6 +62,24 @@ let validate = () => {
     errorMessage4.className = "input-error"; 
     errorMessage4.focus();
   }
+  if (document.forms.dob.value === "") {
+    return false;
+  }
+  if (document.forms.iswId.value === "") {
+    return false;
+  }
+  if (document.forms.password.value === "") {
+    return false;
+  }
+  if (document.forms.confirmPassword.value === "") {
+    return false;
+  }
+  if (document.forms.licenseNo.value === "") {
+    return false;
+  }
+  if (document.forms.plateNo.value === "") {
+    return false;
+  }
 
   return true;
 };
@@ -67,13 +93,13 @@ form.addEventListener("submit", (event) => {
 
   if (isValid) console.log(event.target);
 });
-// Form email validation ends
+// Form validation ends
 
 const container = document.querySelector(".container"),
 pwShowHide = document.querySelectorAll(".showHidePw"),
 pwFields = document.querySelectorAll(".password");
      
-     //js code to show/hide password and change icon
+     //js code to show/hide password and change icon starts
       pwShowHide.forEach(eyeIcon =>{
         eyeIcon.addEventListener("click", ()=>{
             pwFields.forEach(pwField =>{
@@ -95,3 +121,50 @@ pwFields = document.querySelectorAll(".password");
             })
         })
       })
+           //js code to show/hide password and change icon ends
+
+          //jQuery Connecting to backend starts
+         
+          let obj = {}
+
+          $('#submitHost').click(function (e) { 
+            // e.preventDefault();
+
+            let ans = validate();
+
+            console.log(ans)
+            if(ans){
+
+              obj.firstName = $('#fname').val();
+              obj.lastName = $('#lname').val();
+              obj.email = $('#email').val();
+              obj.mobile = $('#phone').val();
+              obj.doB = $('#dob').val();
+              obj.iswId = $('#iswId').val();
+              obj.password = $('#password').val();
+              obj.driverLicense = $('#licenseNo').val();
+              obj.plateNumber = $('#plateNo').val();
+
+              console.log(obj)
+
+
+              $.ajax({
+                type: "POST",
+                contentType: "application/json",
+                url: "http://localhost:8080/user/register-host",
+                data:JSON.stringify(obj),
+                success: function (response) {
+                  
+                  console.log('sent ' + obj )
+                    window.location = "Login.html"
+                },
+                error:(error)=>{
+                    alert(error)
+                }
+            });
+
+            }
+          });                
+          });
+                 //jQuery Connecting to backend ends
+    
