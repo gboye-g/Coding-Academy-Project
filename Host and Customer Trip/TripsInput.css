@@ -88,20 +88,17 @@ nav ul li a:hover {
     flex-direction: column;
 } 
 
+.form-control #time{
+    margin-bottom: 50px;
+}
 .form-control #left{
     margin-right: 100px;
-    margin-top: 50px;
     margin-bottom: 50px;
 }
 .form-control #right{
     margin-left: 100px;
 }
-.form-control #center{
-    margin-left: 90px;
-    margin-right: 90px;
-    margin-top: 60px;
-    margin-bottom: 60px;
-}
+
 .form-control input, select {
     border: 3px solid black;
     text-align: center;
@@ -125,7 +122,6 @@ select{
 }
 
 .submit-btn {
-    margin-top: 50px;
     padding: 10px 20px;
     border-radius: 30px;
     border: 0;
@@ -136,6 +132,9 @@ select{
     cursor: pointer;
     background: black;
     transition: all 0.3s ease;
+}
+.upload{
+    margin-top: 50px;
 }
 .submit-btn:hover{
     transform: scale(1.02,1.04);
