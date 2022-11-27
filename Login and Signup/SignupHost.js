@@ -1,8 +1,6 @@
 $(document).ready(function () {
   
 // Form validation starts
-let errorMessage = document.getElementById("errorMessage");
-
 let fname = document.getElementById("fname");
 let lname = document.getElementById("lname");
 let email = document.getElementById("email");

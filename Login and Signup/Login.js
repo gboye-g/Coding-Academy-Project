@@ -1,5 +1,35 @@
- //js code to appear user dropdown options
+$(document).ready(function () {
+ 
+// Form validation starts
 
+let email = document.getElementById("email");
+let password = document.getElementById("password");
+
+let email_pattern = /^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/;
+
+let validate = () => {
+  if (
+    document.forms.email.value === "" ||
+    !document.forms.email.value.match(email_pattern)
+  ) {
+    errorMessage3.className = "active"; 
+    errorMessage3.focus();
+
+    return false;
+  }
+  else{
+    errorMessage3.className = "input-error"; 
+    errorMessage3.focus();
+  }
+  if (document.forms.password.value === "") {
+    return false;
+  }
+
+  return true;
+};
+// Form validation ends
+  
+ //js code to appear user dropdown options starts
  let toggle = document.getElementById("toggle"),
  hostToggle = document.querySelectorAll(".toggle-btn")[1];
  cusToggle = document.querySelectorAll(".toggle-btn")[0];
@@ -10,43 +40,13 @@
  cusToggle.addEventListener("click", ()=>{
   toggle.classList.remove("active");
 })
+//js code to appear user dropdown options ends
 
-
-let email = document.getElementById("email"),
-    errorMessage = document.getElementById("errorMessage");
-
-let email_pattern = /^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/;
-
-let validate = () => { 
-  if (
-    document.forms.email.value === "" ||
-    !document.forms.email.value.match(email_pattern)
-  ) {
-    errorMessage.className = "active"; 
-    errorMessage.focus();
-
-    return false;
-  }
-  
-  return true;
-};
-
-let form = document.getElementById("login");
-
-form.addEventListener("submit", (event) => {
-  event.preventDefault();
-
-  let isValid = validate();
-
-  if (isValid) console.log(event.target);
-});
-
-
+//js code to show/hide password and change icon starts
 const container = document.querySelector(".container"),
       pwShowHide = document.querySelectorAll(".showHidePw"),
       pwFields = document.querySelectorAll(".password");
 
-      //js code to show/hide password and change icon
       pwShowHide.forEach(eyeIcon =>{
         eyeIcon.addEventListener("click", ()=>{
             pwFields.forEach(pwField =>{
@@ -68,3 +68,55 @@ const container = document.querySelector(".container"),
             })
         })
       })
+      //js code to show/hide password and change icon ends
+
+                //jQuery Connecting to backend starts
+                let obj = {}
+
+                $('#submitLogin').click(function (e) { 
+                  e.preventDefault();
+      
+                  let ans = validate();
+      
+                  console.log(ans)
+                  if(ans){
+      
+                    obj.email = $('#email').val();
+                    obj.password = $('#password').val();
+      
+                    console.log(obj)
+      
+                    $.ajax({
+                      type: "POST",
+                      contentType: "application/json",
+                      url: "http://localhost:8080/user/login",
+                      data:JSON.stringify(obj),
+                      success: function (response) {
+                        
+                        console.log('sent ' + obj )
+                          window.location = "../Landing Page/Landing.html"
+                      },
+                      error:(error)=>{
+                          alert(error)
+                      }
+                    });
+
+                    // $.ajax({
+                    //   type: "GET",
+                    //   contentType: "application/json",
+                    //   url: "http://localhost:8080/user/login",
+                    //   data:JSON.stringify(obj),
+                    //   success: function (response) {
+                        
+                    //     // console.log('sent ' + obj )
+                    //       // window.location = "../Landing Page/Landing.html"
+                    //   },
+                    //   error:(error)=>{
+                    //       alert(error)
+                    //   }
+                    // });
+
+                  }
+                });                
+                });
+                       //jQuery Connecting to backend ends
