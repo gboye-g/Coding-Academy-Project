@@ -67,8 +67,15 @@ let validate = () => {
   if (document.forms.password.value === "") {
     return false;
   }
-  if (document.forms.confirmPassword.value === "") {
+  if (document.forms.password.value !== document.forms.confirmPassword.value) {
+    errorMessage5.className = "active"; 
+    errorMessage5.focus();
+    
     return false;
+  }
+  else{
+    errorMessage5.className = "input-error"; 
+    errorMessage5.focus();
   }
 
   return true;
@@ -120,7 +127,7 @@ pwFields = document.querySelectorAll(".password");
             let obj = {}
 
             $('#submitCus').click(function (e) { 
-              // e.preventDefault();
+              e.preventDefault();
 
               let ans = validate();
 
@@ -141,7 +148,7 @@ pwFields = document.querySelectorAll(".password");
                 $.ajax({
                   type: "POST",
                   contentType: "application/json",
-                  url: "http://localhost:8080/user/register-customer",
+                  url: "http://localhost:8080/users/register-customer",
                   data:JSON.stringify(obj),
                   success: function (response) {
                     
@@ -150,6 +157,7 @@ pwFields = document.querySelectorAll(".password");
                   },
                   error:(error)=>{
                       alert(error)
+                      console.log('err    '+error.message)
                   }
               });
 

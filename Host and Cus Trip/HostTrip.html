@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>DeePee Find a Ride</title>
+
+    <title>DeePee Upload A Trip</title>
     <link rel="shortcut icon " href="/Landing Page/Images/Logo picture.jpg">
 
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
@@ -19,26 +19,29 @@
     <nav>
         <div class="nav-item-wrapper">
 
-            <a href="../Landing Page/Landing.html" class="logo">
+            <a href="" class="logo">
                 <div>DeePee</div>
             </a>
 
             <ul>
                 <li><a href="../Landing Page/Landing.html">Home</a></li>
-                <li><a href="../Host and Customer Dashboard/CusDash.html">Dashboard</a></li>
+                <li><a href="../Host and Cus Dash/HostDash.html">Dashboard</a></li>
                 <li><a href="../Login and Signup/Login.html">logout</a></li>
             </ul>
         </div>
     </nav>
 
     <div class="main-container">
-            
-        <p>Search by choice location</p>
+        
+        <p>Kindly enter your trip details</p>
 
-        <form name="forms" class="wrappers" id="CusTrip">
+        <form name="forms" class="wrappers" id="HostTrip">
+            <div class="form-control time">
+                <input id="time" type="datetime-local" placeholder="Departure time" min="2022-11-28T00:00" required>
+            </div>
 
             <div class="wrapper-input form-control">
-                <select id="left" required>
+                <select id="left" class="sourceLocationList" required>
                     <option value="" disabled selected hidden>Source location</option>
                     <option value="0">Aguda</option>
                     <option value="1">Surulere</option>
@@ -56,7 +59,7 @@
                     <option value="13">Addo Road</option>
                     <option value="14">Abule-Egba</option>
                 </select>
-                <select id="right" required>
+                <select id="right" class="destinationLocationList" required>
                     <option value="" disabled selected hidden>Destination location</option>
                     <option value="0">Aguda</option>
                     <option value="1">Surulere</option>
@@ -76,12 +79,20 @@
                 </select>
             </div>
 
-            <button type="submit" class="submit-btn">Search</button>
+            <div class="form-control seats">
+                <input id="noOfSeats" type="number" placeholder="No of available seats" min="1" max="4" m required>
+            </div>
+
+            <button id="uploadTrip" type="submit" class="submit-btn upload">Upload</button>
             
         </form>
+
     </div>
 
-    <script src="TripsInput.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.js" 
+    integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" 
+    crossorigin="anonymous"></script>
+    <script src="HostTrip.js"></script>
 
 </body>
-</html>
+</head>

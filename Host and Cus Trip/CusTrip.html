@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>DeePee Upload A Trip</title>
+    
+    <title>DeePee Find a Ride</title>
     <link rel="shortcut icon " href="/Landing Page/Images/Logo picture.jpg">
 
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
@@ -25,20 +25,17 @@
 
             <ul>
                 <li><a href="../Landing Page/Landing.html">Home</a></li>
-                <li><a href="../Host and Customer Dashboard/HostDash.html">Dashboard</a></li>
+                <li><a href="../Host and Cus Dash/CusDash.html">Dashboard</a></li>
                 <li><a href="../Login and Signup/Login.html">logout</a></li>
             </ul>
         </div>
     </nav>
 
     <div class="main-container">
-        
-        <p>Kindly enter your trip details</p>
+            
+        <p>Search by choice location</p>
 
-        <form name="forms" class="wrappers" id="HostTrip">
-            <div class="form-control time">
-                <input id="time" type="datetime-local" placeholder="Departure time" min="" required>
-            </div>
+        <form name="forms" class="wrappers" id="CusTrip">
 
             <div class="wrapper-input form-control">
                 <select id="left" required>
@@ -79,23 +76,12 @@
                 </select>
             </div>
 
-            <div class="form-control seats">
-                <select required>
-                    <option value="" disabled selected hidden>No of available seats</option>
-                    <option value="0">1</option>
-                    <option value="1">2</option>
-                    <option value="2">3</option>
-                    <option value="3">4</option>
-                </select>
-            </div>
-
-            <button type="submit" class="submit-btn upload">Upload</button>
+            <button type="submit" class="submit-btn">Search</button>
             
         </form>
-
     </div>
 
-    <script src="TripsInput.js"></script>
+    <script src="CusTrip.js"></script>
 
 </body>
-</head>
+</html>
