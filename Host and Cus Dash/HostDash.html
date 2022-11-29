@@ -18,9 +18,9 @@
 
 <body>
 
-  <div class="container"> 
+    <div class="container"> 
 
-        <!-- <nav>
+        <nav>
             <div class="nav-item-wrapper">
     
                 <a href="../Landing Page/Landing.html" class="logo">
@@ -29,9 +29,7 @@
     
                 <ul>
                     <li> 
-                        <a href="../Login and Signup/Login.html">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                        Find A Ride</a>
+                        <a href=""> <i class="fa-regular fa-user"></i> </a>
                     </li>
             
                     <li>
@@ -43,13 +41,32 @@
                     <li><a href="../Login and Signup/Login.html">logout</a></li>
                 </ul>
             </div>
-        </nav>  -->
+        </nav> 
+        
+        <div class="table-container">
 
-        <ul id="table">
+            <div class="table-container-heading-title"><h1>YOUR UPLOADED TRIPS</h1></div>
 
-        </ul>
+            <div id="table">
+                <table class="host-details-table">
+                    <thead>
+                        <tr>
+                            <th>Start time</th>
+                            <th>Source location</th>
+                            <th>Destination location</th>
+                            <th>Maximum Number Of Seats</th>
+                            <th>View Request</th>
+                        </tr>
+                    </thead>
+                    <tbody id="hostDashTableBody"></tbody>
+                </table>
+                <div>
+                    <ul id="table"> </ul>
+                </div> 
+            </div>
 
-        <li>dsdffdfsfs</li>
+        </div>
+
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.1.js" 

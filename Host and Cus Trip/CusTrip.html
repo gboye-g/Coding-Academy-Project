@@ -38,7 +38,7 @@
         <form name="forms" class="wrappers" id="CusTrip">
 
             <div class="wrapper-input form-control">
-                <select id="left" required>
+                <select id="left" class="sourceLocationList" required>
                     <option value="" disabled selected hidden>Source location</option>
                     <option value="0">Aguda</option>
                     <option value="1">Surulere</option>
@@ -56,7 +56,7 @@
                     <option value="13">Addo Road</option>
                     <option value="14">Abule-Egba</option>
                 </select>
-                <select id="right" required>
+                <select id="right" class="destinationLocationList" required>
                     <option value="" disabled selected hidden>Destination location</option>
                     <option value="0">Aguda</option>
                     <option value="1">Surulere</option>
@@ -76,11 +76,17 @@
                 </select>
             </div>
 
-            <button type="submit" class="submit-btn">Search</button>
+            <div class="input-error" id="errorMessage1">Matching Source and Destination Location !</div>
+
+
+            <button id="searchTrip" type="submit" class="submit-btn">Search</button>
             
         </form>
     </div>
 
+    <script src="https://code.jquery.com/jquery-3.6.1.js" 
+    integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" 
+    crossorigin="anonymous"></script>
     <script src="CusTrip.js"></script>
 
 </body>

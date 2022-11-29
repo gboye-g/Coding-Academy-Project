@@ -34,10 +34,8 @@
                         Find A Ride</a>
                     </li>
             
-                    <li>
-                        <a href="../Login and Signup/Login.html">
-                        <i class="fa-solid fa-upload"></i>
-                        Upload A Trip</a>
+                    <li> 
+                        <a href=""> <i class="fa-regular fa-user"></i> </a>
                     </li>
     
                     <li><a href="../Login and Signup/Login.html">logout</a></li>
@@ -45,8 +43,36 @@
             </div>
         </nav>
 
+        <div class="table-container">
+
+            <div class="table-container-heading-title"><h1>YOUR SEARCH RESULT(S)</h1></div>
+
+            <div id="table">
+                <table class="host-details-table">
+                    <thead>
+                        <tr>
+                            <th>Host's First Name</th>
+                            <th>Host's Last Name</th>
+                            <th>Host's Email Address</th>
+                            <th>Host's Phone Number</th>
+                            <th>Host's Plate Number</th>
+                            <th>Make Request</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cusDashTablebody"></tbody>
+                </table>
+                <div>
+                    <ul id="table"> </ul>
+                </div> 
+            </div>
+
+        </div>
+
     </div>
 
+    <script src="https://code.jquery.com/jquery-3.6.1.js" 
+    integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" 
+    crossorigin="anonymous"></script>
     <script src="CusDash.js"></script>
 
 </body>

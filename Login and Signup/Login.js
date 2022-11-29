@@ -1,10 +1,7 @@
 $(document).ready(function () {
- 
-// Form validation starts
-let email = document.getElementById("email");
-let password = document.getElementById("password");
-let state =''
+  let state = ''
 
+// Form validation starts
 let email_pattern = /^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/;
 
 let validate = () => {
@@ -32,6 +29,8 @@ let validate = () => {
 //jQuery Connecting to backend starts
    let obj = {}    
 let submitFunc = ()=>{
+  console.log(state);
+  
   let url = ''
   let redirect = ''
 
@@ -80,14 +79,13 @@ let submitFunc = ()=>{
  let toggle = document.getElementById("toggle"),
  hostToggle = document.querySelectorAll(".toggle-btn")[1];
  cusToggle = document.querySelectorAll(".toggle-btn")[0];
-
- hostToggle.addEventListener("click", ()=>{
+ hostToggle.addEventListener('click', ()=>{
    toggle.classList.add("active");
    state = 'host'
    console.log(state)
    submitFunc()
  })
- cusToggle.addEventListener("click", ()=>{
+ cusToggle.addEventListener('click', ()=> {
   toggle.classList.remove("active");
   state = 'customer'
   console.log(state)

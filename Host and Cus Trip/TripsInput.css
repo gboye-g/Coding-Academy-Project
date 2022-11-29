@@ -121,6 +121,20 @@ select{
     -webkit-appearance: none;
 }
 
+/* Form validation script (START) */
+.input-error {
+    display: none;
+}
+.active {
+    font-size: larger;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 10px;
+    z-index: 3;
+    color: red;
+}
+/* For form validation script (END) */
+
 .submit-btn {
     padding: 10px 20px;
     border-radius: 30px;

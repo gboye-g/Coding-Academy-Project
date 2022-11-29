@@ -1,14 +1,6 @@
 $(document).ready(function () {
   
 // Form validation starts
-let fname = document.getElementById("fname");
-let lname = document.getElementById("lname");
-let email = document.getElementById("email");
-let phone = document.getElementById("phone");
-let dob = document.getElementById("dob");
-let iswId = document.getElementById("iswId");
-let password = document.getElementById("password");
-let confirmPassword = document.getElementById("confirmPassword");
 
 let name_pattern = /^[A-Za-z-]+$/;
 let email_pattern = /^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/;
@@ -95,7 +87,6 @@ let validate = () => {
 // Form validation ends
 
       //js code to show/hide password and change icon starts
-const container = document.querySelector(".container"),
 pwShowHide = document.querySelectorAll(".showHidePw"),
 pwFields = document.querySelectorAll(".password");
 
@@ -127,7 +118,7 @@ pwFields = document.querySelectorAll(".password");
             let obj = {}
 
             $('#submitCus').click(function (e) { 
-              e.preventDefault();
+              // e.preventDefault();
 
               let ans = validate();
 
