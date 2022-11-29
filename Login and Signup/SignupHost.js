@@ -81,13 +81,14 @@ let validate = () => {
 
 let form = document.getElementById("signupHost");
 
-form.addEventListener("submit", (event) => {
-  event.preventDefault();
+//Replaced with Jquery click
+// form.addEventListener("submit", (event) => {
+//   event.preventDefault();
 
-  let isValid = validate();
+//   let isValid = validate();
 
-  if (isValid) console.log(event.target);
-});
+//   if (isValid) console.log(event.target);
+// });
 // Form validation ends
 
 pwShowHide = document.querySelectorAll(".showHidePw"),
@@ -122,7 +123,7 @@ pwFields = document.querySelectorAll(".password");
           let obj = {}
 
           $('#submitHost').click(function (e) { 
-            // e.preventDefault();
+            e.preventDefault();
 
             let ans = validate();
 
@@ -153,7 +154,7 @@ pwFields = document.querySelectorAll(".password");
                     window.location = "Login.html"
                 },
                 error:(error)=>{
-                    alert(error)
+                    // alert(error)
                     console.log('err    '+error.message)
                     errorMessage6.className = "active"; 
                 }

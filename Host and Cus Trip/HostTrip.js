@@ -15,14 +15,12 @@ $(document).ready(function () {
 
 
           $(".sourceLocationList").change(function (e) {
-            console.log(e.target.id);
             let text = $(".sourceLocationList option:selected").text();
             console.log(text);
             sourceCategory = text;
           });
 
           $(".destinationLocationList").change(function (e) {
-            console.log(e.target.id);
             let text = $(".destinationLocationList option:selected").text();
             console.log(text);
             destinationCategory = text;
@@ -47,7 +45,7 @@ let validate = () => {
   
 
           $('#uploadTrip').click(function (e) { 
-            // e.preventDefault();
+            e.preventDefault();
 
             let ans = validate();
             console.log(ans)
@@ -69,7 +67,7 @@ let validate = () => {
                 data:JSON.stringify(obj),
                 success: function (response) {
                   
-                  console.log('sent ' + obj )
+                  // console.log('sent ' + obj )
                   window.location = "../Host and Cus Dash/HostDash.html"
                 },
                 // error:(error)=>{

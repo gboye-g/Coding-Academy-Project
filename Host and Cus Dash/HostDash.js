@@ -14,7 +14,7 @@ $(document).ready(function () {
   let listitem = (single)=> {
     return `
       <tr id='${single.id}'>
-        <td>${single.startTime}</td>
+        <td>${(new Date(single.startTime)).toDateString()}</td>
         <td>${single.sourceLocations}</td>
         <td>${single.destinationLocations}</td>
         <td>${single.noOfSeats}</td>

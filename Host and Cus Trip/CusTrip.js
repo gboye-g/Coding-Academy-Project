@@ -1,7 +1,4 @@
 $(document).ready(function () {
-  let userid = sessionStorage.getItem('userid');
-  let requestid = sessionStorage.getItem('requestid');
-
   //jQuery Connecting to backend starts
             let obj = {}
 
@@ -41,7 +38,7 @@ if (sourceCategory == destinationCategory) {
 
 
           $('#searchTrip').click(function (e) { 
-            // e.preventDefault();
+            e.preventDefault();
 
             let ans = validate();
             console.log(ans)
@@ -52,20 +49,8 @@ if (sourceCategory == destinationCategory) {
               obj.destinationLocations = destinationCategory;
 
               console.log(obj)
-
-
-              $.ajax({
-                type: "POST",
-                contentType: "application/json",
-                url: `http://localhost:8080/users/${tripid}/trips/${requestid}/requests`,
-                data:JSON.stringify(obj),
-                success: function (response) {
-                  
-                  console.log('sent ' + obj )
-                    window.location = "../Host and Cus Dash/CusDash.html"
-                },
-            });
-
+              localStorage.setItem("pathParam", JSON.stringify(obj))
+              window.location = "../Host and Cus Dash/CusDash.html"
           }
 
           });  

@@ -1,5 +1,4 @@
 $(document).ready(function () {
-
   //Jquery connection to backend starts
   let userid = sessionStorage.getItem('userid');
 
@@ -10,29 +9,30 @@ $(document).ready(function () {
 
     });
   }
+  console.log(localStorage.getItem("res"), "displayed")
 
   let listitem = (single)=> {
+    console.log(single,"eeee")
     return `
-      <tr id='${single.id}'>
-        <td>${single.firstName}</td>
-        <td>${single.lastName}</td>
-        <td>${single.email}</td>
-        <td>${single.mobile}</td>
-        <td>${single.plateNumber}</td>
-        <td><button>Click</button></td>
+      <tr id=''>
+        <td>${single?.phoneNumber}</td>
+        <td>${single?.vehicleNo}</td>
+        <td>${new Date(single?.startTime).toDateString()}</td>
+        <td>${single?.lhostName}</td>
+        <td>${single?.fhostName}</td>
       </tr>
     `
   }
-
+  const obj = JSON.parse(localStorage.getItem("pathParam"));
   $.ajax({
     type: "GET",
-    url: "http://localhost:8080/hosts/" + userid + "/trips",
+    url: `http://localhost:8080/users/${userid}/trips/search/${obj.sourceLocations}/${obj.destinationLocations}`,
     success: function (response) {
       $.each(response, function (indexInArray, valueOfElement) {
         
-        console.log(valueOfElement)
-        $('#cusDashTableBody').append(listitem(valueOfElement));
-
+        console.log(valueOfElement,"yyyy")
+        $('#cusDashTablebody').append(listitem(valueOfElement));
+        
       });
 
     }

@@ -118,7 +118,7 @@ pwFields = document.querySelectorAll(".password");
             let obj = {}
 
             $('#submitCus').click(function (e) { 
-              // e.preventDefault();
+              e.preventDefault();
 
               let ans = validate();
 
@@ -147,8 +147,8 @@ pwFields = document.querySelectorAll(".password");
                       window.location = "Login.html"
                   },
                   error:(error)=>{
-                      alert(error)
-                      console.log('err    '+error.message)
+                    console.log('err    '+error.message)
+                    errorMessage6.className = "active"; 
                   }
               });
 
