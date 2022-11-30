@@ -15,11 +15,11 @@ $(document).ready(function () {
     console.log(single,"eeee")
     return `
       <tr id=''>
+        <td>${new Date(single?.startTime).toDateString()}</td>
+        <td>${single?.fhostName}</td>
+        <td>${single?.lhostName}</td>
         <td>${single?.phoneNumber}</td>
         <td>${single?.vehicleNo}</td>
-        <td>${new Date(single?.startTime).toDateString()}</td>
-        <td>${single?.lhostName}</td>
-        <td>${single?.fhostName}</td>
       </tr>
     `
   }
